@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strawberry Fields — Land in Pescadero, Baja California Sur</title>
+  <meta name="description" content="7 premium lots from $149,000 USD in Gavilan, Pescadero. Ocean views, walking distance to San Pedrito surf beach. Listed by RARE Ricardo Amigo Real Estate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:    #f5f0e8;
+      --sand:     #e8dfc8;
+      --earth:    #2c2416;
+      --olive:    #3a3d28;
+      --sage:     #6b7455;
+      --gold:     #c9a84c;
+      --gold-lt:  #e2c87a;
+      --rust:     #b85c38;
+      --sky:      #7ca8b8;
+      --white:    #fefcf8;
+      --serif:    'Cormorant Garamond', Georgia, serif;
+      --sans:     'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--earth);
+      color: var(--cream);
+      font-family: var(--sans);
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 48px;
+      background: linear-gradient(to bottom, rgba(44,36,22,.95) 0%, transparent 100%);
+      backdrop-filter: blur(2px);
+    }
+    .nav-logo img { height: 36px; filter: brightness(0) invert(1); opacity: .9; }
+    .nav-cta {
+      font-family: var(--sans); font-size: .78rem; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--earth); background: var(--gold);
+      border: none; border-radius: 2px;
+      padding: 10px 24px; cursor: pointer;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--gold-lt); }
+
+    /* ─── HERO ────────────────────────────────────────── */
+    .hero {
+      position: relative; height: 100svh; min-height: 600px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: flex-end;
+      padding-bottom: 80px; text-align: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000529787986000000-o.jpg') center/cover no-repeat;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(44,36,22,.35) 0%,
+        rgba(44,36,22,.1) 40%,
+        rgba(44,36,22,.75) 80%,
+        rgba(44,36,22,1) 100%
+      );
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .hero-eyebrow {
+      font-family: var(--sans); font-size: .72rem; font-weight: 400;
+      letter-spacing: .25em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 18px;
+      opacity: 0; animation: fadeUp .8s .2s forwards;
+    }
+    .hero-title {
+      font-family: var(--serif); font-weight: 300;
+      font-size: clamp(3.2rem, 8vw, 7rem); line-height: .95;
+      color: var(--white); margin-bottom: 28px;
+      opacity: 0; animation: fadeUp .9s .4s forwards;
+    }
+    .hero-title em { font-style: italic; color: var(--gold-lt); }
+    .hero-sub {
+      font-size: .92rem; font-weight: 300; letter-spacing: .05em;
+      color: var(--sand); max-width: 480px; line-height: 1.7;
+      margin: 0 auto 40px;
+      opacity: 0; animation: fadeUp .8s .6s forwards;
+    }
+    .hero-badges {
+      display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp .8s .8s forwards;
+    }
+    .badge {
+      font-family: var(--sans); font-size: .7rem; font-weight: 500;
+      letter-spacing: .15em; text-transform: uppercase;
+      padding: 7px 18px; border: 1px solid rgba(201,168,76,.45);
+      color: var(--gold-lt); border-radius: 1px;
+      background: rgba(201,168,76,.08);
+    }
+    .scroll-hint {
+      position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      font-size: .65rem; letter-spacing: .2em; text-transform: uppercase;
+      color: rgba(245,240,232,.5); z-index: 2;
+      animation: pulse 2s infinite;
+    }
+    .scroll-hint::after {
+      content: '';
+      display: block; width: 1px; height: 40px;
+      background: linear-gradient(to bottom, rgba(201,168,76,.6), transparent);
+    }
+
+    /* ─── SECTIONS ────────────────────────────────────── */
+    section { padding: 100px 0; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
+    .section-label {
+      font-family: var(--sans); font-size: .68rem; font-weight: 500;
+      letter-spacing: .25em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .section-label::after {
+      content: ''; flex: 1; max-width: 60px;
+      height: 1px; background: var(--gold); opacity: .4;
+    }
+    .section-title {
+      font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 300; line-height: 1.1; color: var(--white);
+      margin-bottom: 24px;
+    }
+    .section-title em { font-style: italic; color: var(--gold-lt); }
+    .section-body {
+      font-size: .96rem; font-weight: 300; line-height: 1.85;
+      color: var(--sand); max-width: 640px;
+    }
+
+    /* ─── INTRO SPLIT ─────────────────────────────────── */
+    .intro { background: var(--earth); }
+    .intro-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .intro-img {
+      position: relative; border-radius: 2px; overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .intro-img img { width: 100%; height: 100%; object-fit: cover; }
+    .intro-img::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(135deg, rgba(201,168,76,.15) 0%, transparent 60%);
+    }
+    .intro-tag {
+      position: absolute; bottom: 20px; left: 20px; z-index: 2;
+      font-size: .65rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--white); background: rgba(44,36,22,.75);
+      border: 1px solid rgba(201,168,76,.3);
+      padding: 6px 14px; border-radius: 1px;
+    }
+    .stat-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: rgba(201,168,76,.15); margin-top: 40px;
+      border: 1px solid rgba(201,168,76,.15);
+    }
+    .stat {
+      background: var(--earth); padding: 22px 24px;
+    }
+    .stat-num {
+      font-family: var(--serif); font-size: 2.2rem; font-weight: 300;
+      color: var(--gold-lt); line-height: 1;
+    }
+    .stat-label {
+      font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--sage); margin-top: 4px;
+    }
+
+    /* ─── LOT SELECTOR ────────────────────────────────── */
+    .lots-section { background: var(--olive); }
+    .lots-intro {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      margin-bottom: 60px; flex-wrap: wrap; gap: 24px;
+    }
+    .lots-note {
+      font-size: .82rem; color: var(--sage); max-width: 280px; line-height: 1.7;
+      font-style: italic;
+    }
+
+    .lots-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+    }
+
+    .lot-card {
+      position: relative; cursor: pointer;
+      border-radius: 2px; overflow: hidden;
+      border: 1px solid rgba(201,168,76,.15);
+      transition: all .35s cubic-bezier(.22,1,.36,1);
+      aspect-ratio: 2/3;
+      background: #1a160e;
+    }
+    .lot-card:hover, .lot-card.active {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    }
+    .lot-card img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .6s ease;
+      opacity: .75;
+    }
+    .lot-card:hover img, .lot-card.active img { transform: scale(1.06); opacity: .9; }
+    .lot-card-inner {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 14px 12px;
+      background: linear-gradient(to top, rgba(44,36,22,.95) 0%, transparent 60%);
+    }
+    .lot-num {
+      font-family: var(--serif); font-size: 1.5rem; font-weight: 300;
+      color: var(--gold-lt); line-height: 1;
+    }
+    .lot-price-sm {
+      font-size: .65rem; letter-spacing: .1em; color: var(--sand);
+      margin-top: 2px;
+    }
+    .lot-badge-sale {
+      position: absolute; top: 10px; left: 10px;
+      background: var(--rust); color: white;
+      font-size: .58rem; letter-spacing: .15em; text-transform: uppercase;
+      padding: 4px 8px; border-radius: 1px;
+    }
+    .lot-badge-avail {
+      position: absolute; top: 10px; right: 10px;
+      background: rgba(44,36,22,.8); border: 1px solid rgba(201,168,76,.4);
+      color: var(--gold-lt);
+      font-size: .58rem; letter-spacing: .1em;
+      padding: 3px 8px; border-radius: 1px;
+    }
+
+    /* Lot Detail Panel */
+    .lot-detail {
+      margin-top: 32px;
+      background: rgba(44,36,22,.6);
+      border: 1px solid rgba(201,168,76,.2);
+      border-radius: 2px;
+      padding: 40px;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 40px; align-items: start;
+      transition: opacity .3s;
+    }
+    .lot-detail-title {
+      font-family: var(--serif); font-size: 2rem; font-weight: 300;
+      color: var(--white); margin-bottom: 8px;
+    }
+    .lot-detail-price {
+      font-family: var(--serif); font-size: 1.4rem; color: var(--gold-lt);
+      margin-bottom: 16px;
+    }
+    .lot-detail-price s { color: var(--sage); font-size: 1rem; margin-left: 8px; }
+    .lot-detail-text {
+      font-size: .88rem; line-height: 1.8; color: var(--sand);
+    }
+    .lot-detail-meta {
+      display: flex; flex-direction: column; gap: 12px;
+      min-width: 180px;
+    }
+    .meta-item { display: flex; flex-direction: column; gap: 2px; }
+    .meta-key {
+      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--sage);
+    }
+    .meta-val {
+      font-family: var(--serif); font-size: 1.1rem; color: var(--white);
+    }
+    .lot-detail-cta {
+      margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;
+    }
+    .btn-primary {
+      font-family: var(--sans); font-size: .75rem; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase;
+      background: var(--gold); color: var(--earth);
+      border: none; border-radius: 2px;
+      padding: 14px 28px; cursor: pointer;
+      text-decoration: none;
+      transition: background .2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--gold-lt); }
+    .btn-secondary {
+      font-family: var(--sans); font-size: .75rem; font-weight: 400;
+      letter-spacing: .12em; text-transform: uppercase;
+      background: transparent; color: var(--gold-lt);
+      border: 1px solid rgba(201,168,76,.45);
+      border-radius: 2px;
+      padding: 14px 28px; cursor: pointer;
+      text-decoration: none;
+      transition: all .2s;
+      display: inline-block;
+    }
+    .btn-secondary:hover {
+      background: rgba(201,168,76,.1);
+      border-color: var(--gold-lt);
+    }
+
+    /* ─── LOCATION ────────────────────────────────────── */
+    .location { background: var(--earth); }
+    .location-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+    }
+    .location-points { margin-top: 40px; display: flex; flex-direction: column; gap: 0; }
+    .loc-item {
+      display: grid; grid-template-columns: 48px 1fr;
+      gap: 20px; align-items: start;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(201,168,76,.1);
+    }
+    .loc-item:first-child { border-top: 1px solid rgba(201,168,76,.1); }
+    .loc-icon {
+      font-family: var(--serif); font-size: 1.4rem; color: var(--gold);
+      font-style: italic; padding-top: 2px;
+    }
+    .loc-name { font-size: .82rem; font-weight: 500; color: var(--white); margin-bottom: 3px; }
+    .loc-dist { font-size: .78rem; color: var(--sage); }
+
+    .location-visual {
+      position: sticky; top: 120px;
+    }
+    .location-img-wrap {
+      border-radius: 2px; overflow: hidden; aspect-ratio: 3/4; position: relative;
+    }
+    .location-img-wrap img { width: 100%; height: 100%; object-fit: cover; opacity: .8; }
+    .location-caption {
+      margin-top: 14px;
+      font-size: .72rem; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--sage); text-align: center;
+    }
+
+    /* ─── GALLERY ─────────────────────────────────────── */
+    .gallery { background: var(--olive); padding: 80px 0; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 8px;
+    }
+    .gallery-item {
+      overflow: hidden; border-radius: 2px;
+      position: relative; cursor: pointer;
+    }
+    .gallery-item:first-child {
+      grid-column: 1 / 3; grid-row: 1 / 2;
+      aspect-ratio: 16/7;
+    }
+    .gallery-item:not(:first-child) { aspect-ratio: 4/3; }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .7s ease, opacity .3s;
+      opacity: .8;
+    }
+    .gallery-item:hover img { transform: scale(1.04); opacity: 1; }
+
+    /* ─── WHY INVEST ──────────────────────────────────── */
+    .why { background: var(--earth); }
+    .why-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+      background: rgba(201,168,76,.12); border: 1px solid rgba(201,168,76,.12);
+      margin-top: 56px;
+    }
+    .why-card { background: var(--earth); padding: 40px 32px; }
+    .why-num {
+      font-family: var(--serif); font-size: 3rem; font-weight: 300;
+      color: rgba(201,168,76,.2); line-height: 1; margin-bottom: 20px;
+    }
+    .why-title {
+      font-family: var(--serif); font-size: 1.3rem; font-weight: 400;
+      color: var(--white); margin-bottom: 12px;
+    }
+    .why-text { font-size: .84rem; line-height: 1.75; color: var(--sage); }
+
+    /* ─── FORM ────────────────────────────────────────── */
+    .contact-section {
+      background: var(--olive);
+      position: relative; overflow: hidden;
+    }
+    .contact-section::before {
+      content: 'STRAWBERRY\AFIELDS';
+      white-space: pre;
+      position: absolute; right: -40px; top: 50%; transform: translateY(-50%);
+      font-family: var(--serif); font-size: 14vw; font-weight: 300;
+      color: rgba(201,168,76,.04); line-height: .9;
+      pointer-events: none;
+    }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+      position: relative; z-index: 1;
+    }
+    .contact-note {
+      font-size: .84rem; line-height: 1.85; color: var(--sand);
+      margin-top: 20px;
+    }
+    .agent-card {
+      margin-top: 40px; padding: 28px;
+      border: 1px solid rgba(201,168,76,.2);
+      border-radius: 2px; background: rgba(44,36,22,.4);
+    }
+    .agent-name {
+      font-family: var(--serif); font-size: 1.3rem; color: var(--white);
+    }
+    .agent-title { font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; }
+    .agent-contact { display: flex; flex-direction: column; gap: 6px; }
+    .agent-link {
+      font-size: .82rem; color: var(--gold-lt); text-decoration: none;
+      transition: color .2s;
+    }
+    .agent-link:hover { color: var(--white); }
+
+    /* Form */
+    .form-wrap { }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-label {
+      font-size: .65rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--sage);
+    }
+    .form-input, .form-select, .form-textarea {
+      background: rgba(44,36,22,.6);
+      border: 1px solid rgba(201,168,76,.2);
+      border-radius: 2px;
+      color: var(--cream);
+      font-family: var(--sans); font-size: .88rem; font-weight: 300;
+      padding: 14px 16px;
+      transition: border-color .2s;
+      outline: none;
+      width: 100%;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--gold);
+    }
+    .form-select option { background: #2c2416; }
+    .form-textarea { min-height: 100px; resize: vertical; }
+    .form-submit {
+      width: 100%;
+      font-family: var(--sans); font-size: .78rem; font-weight: 500;
+      letter-spacing: .15em; text-transform: uppercase;
+      background: var(--gold); color: var(--earth);
+      border: none; border-radius: 2px;
+      padding: 18px; cursor: pointer;
+      margin-top: 8px;
+      transition: background .2s;
+    }
+    .form-submit:hover { background: var(--gold-lt); }
+    .form-disclaimer {
+      font-size: .68rem; color: var(--sage); line-height: 1.6;
+      margin-top: 12px; text-align: center;
+    }
+    .form-success {
+      display: none; text-align: center; padding: 40px 20px;
+    }
+    .form-success h3 {
+      font-family: var(--serif); font-size: 1.8rem; color: var(--gold-lt);
+      margin-bottom: 12px;
+    }
+    .form-success p { color: var(--sand); font-size: .88rem; line-height: 1.7; }
+
+    /* ─── FOOTER ──────────────────────────────────────── */
+    footer {
+      background: #1a140c;
+      padding: 48px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 24px;
+      border-top: 1px solid rgba(201,168,76,.1);
+    }
+    .footer-logo img { height: 30px; filter: brightness(0) invert(1); opacity: .6; }
+    .footer-links {
+      display: flex; gap: 28px; flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--sage); text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--gold-lt); }
+    .footer-note { font-size: .68rem; color: rgba(107,116,85,.6); line-height: 1.5; max-width: 360px; }
+
+    /* ─── ANIMATIONS ──────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: .5; } 50% { opacity: 1; }
+    }
+
+    .reveal {
+      opacity: 0; transform: translateY(32px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+
+    /* ─── WHATSAPP FLOAT ──────────────────────────────── */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 200;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25d366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,.35);
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(0,0,0,.4); }
+    .wa-float svg { width: 28px; height: 28px; fill: white; }
+
+    /* ─── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .intro-grid, .location-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .location-visual { position: static; }
+      .lots-grid { grid-template-columns: repeat(4, 1fr); }
+      .why-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item:first-child { grid-column: 1 / 3; }
+      .lot-detail { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 72px 0; }
+      .container { padding: 0 24px; }
+      .lots-grid { grid-template-columns: repeat(4, 1fr); }
+      .form-row { grid-template-columns: 1fr; }
+      .stat-row { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item:first-child { grid-column: 1; }
+      footer { flex-direction: column; padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <img src="https://todossantosmexicorealestate.com/assets/img/logo.svg" alt="RARE Ricardo Amigo Real Estate" />
+  </div>
+  <a href="#contact" class="nav-cta">Inquire Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Gavilan · Pescadero · Baja California Sur</p>
+    <h1 class="hero-title">Strawberry<br /><em>Fields</em></h1>
+    <p class="hero-sub">Seven premium lots from $149,000 USD. Ocean views, farmland, and the Pacific at your doorstep.</p>
+    <div class="hero-badges">
+      <span class="badge">972 m² per lot</span>
+      <span class="badge">400m to the sea</span>
+      <span class="badge">7 lots available</span>
+    </div>
+  </div>
+  <div class="scroll-hint">Explore</div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-text">
+        <p class="section-label reveal">The Opportunity</p>
+        <h2 class="section-title reveal reveal-delay-1">Your land in<br /><em>Baja, yours to build.</em></h2>
+        <p class="section-body reveal reveal-delay-2">
+          Seven contiguous lots in the prestigious Gavilan neighborhood of Pescadero — each approximately 972 m², perfectly sized for a single-family home with a garage, casita, and pool. Purchase one lot or acquire multiple to create an estate. Priced attainably in one of Baja California Sur's most sought-after corridors, these lots offer immediate ocean views from the second level and a lifestyle defined by surf, nature, and community.
+        </p>
+        <div class="stat-row reveal reveal-delay-3">
+          <div class="stat"><div class="stat-num">7</div><div class="stat-label">Lots Available</div></div>
+          <div class="stat"><div class="stat-num">972</div><div class="stat-label">m² per lot</div></div>
+          <div class="stat"><div class="stat-num">&lt;400m</div><div class="stat-label">To the sea</div></div>
+          <div class="stat"><div class="stat-num">1:15</div><div class="stat-label">From SJD Airport</div></div>
+        </div>
+      </div>
+      <div class="intro-img reveal reveal-delay-2">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000627479192000000-o.jpg" alt="Strawberry Fields aerial view" />
+        <div class="intro-tag">Gavilan · Pescadero</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOTS SELECTOR -->
+<section class="lots-section">
+  <div class="container">
+    <div class="lots-intro">
+      <div>
+        <p class="section-label reveal">Available Parcels</p>
+        <h2 class="section-title reveal reveal-delay-1">Choose <em>your lot.</em></h2>
+      </div>
+      <p class="lots-note reveal">Select any lot below to view details, pricing, and request more information.</p>
+    </div>
+
+    <!-- Lot grid -->
+    <div class="lots-grid" id="lotsGrid">
+      <!-- Generated by JS -->
+    </div>
+
+    <!-- Detail Panel -->
+    <div class="lot-detail reveal" id="lotDetail">
+      <div>
+        <h3 class="lot-detail-title" id="detailTitle">Strawberry Fields #1</h3>
+        <p class="lot-detail-price" id="detailPrice">$185,000 USD</p>
+        <p class="lot-detail-text" id="detailText"></p>
+        <div class="lot-detail-cta">
+          <a href="#contact" class="btn-primary" id="detailInquire">Inquire About This Lot</a>
+          <a href="#" target="_blank" class="btn-secondary" id="detailMLS">View Full Listing ↗</a>
+        </div>
+      </div>
+      <div class="lot-detail-meta">
+        <div class="meta-item">
+          <span class="meta-key">Lot Area</span>
+          <span class="meta-val">972 m²</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-key">Title</span>
+          <span class="meta-val">Escritura</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-key">Community</span>
+          <span class="meta-val">Gavilan, Pescadero</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-key">MLS</span>
+          <span class="meta-val" id="detailMLS2">25-4310</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-key">Status</span>
+          <span class="meta-val" style="color: var(--gold-lt);">Available</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location">
+  <div class="container">
+    <div class="location-grid">
+      <div>
+        <p class="section-label reveal">Where You'll Be</p>
+        <h2 class="section-title reveal reveal-delay-1">Everything within<br /><em>reach.</em></h2>
+        <p class="section-body reveal reveal-delay-2">
+          Situated in the Gavilan neighborhood on a private cul-de-sac, Strawberry Fields sits at the crossroads of Baja's most vibrant coastal communities. San Pedrito surf beach is a short walk; Cerritos, Todos Santos, and the Modern Elder Academy are minutes away.
+        </p>
+        <div class="location-points reveal reveal-delay-3">
+          <div class="loc-item">
+            <div class="loc-icon">~</div>
+            <div>
+              <div class="loc-name">San Pedrito Beach</div>
+              <div class="loc-dist">Walking distance · World-class surf break</div>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">~</div>
+            <div>
+              <div class="loc-name">Cerritos Beach</div>
+              <div class="loc-dist">5 min drive · Popular beach &amp; restaurants</div>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">~</div>
+            <div>
+              <div class="loc-name">Todos Santos</div>
+              <div class="loc-dist">15 min · Pueblo Mágico, art galleries, dining</div>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">~</div>
+            <div>
+              <div class="loc-name">Cabo San Lucas</div>
+              <div class="loc-dist">45 min · International hub</div>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">~</div>
+            <div>
+              <div class="loc-name">SJD International Airport</div>
+              <div class="loc-dist">1h 15min · Direct flights from major US cities</div>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">~</div>
+            <div>
+              <div class="loc-name">Modern Elder Academy</div>
+              <div class="loc-dist">Minutes away · World-renowned wellness retreat</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="location-visual reveal reveal-delay-2">
+        <div class="location-img-wrap">
+          <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000628973100000000-o.jpg" alt="Pescadero coastline" />
+        </div>
+        <p class="location-caption">Pescadero · Gavilan Neighborhood</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="container">
+    <p class="section-label reveal" style="margin-bottom:40px;">The Land</p>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000629932340000000-o.jpg" alt="Strawberry Fields aerial" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000631144182000000-o.jpg" alt="Ocean views" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000632571575000000-o.jpg" alt="Farmland surroundings" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000634185944000000-o.jpg" alt="Neighborhood" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY INVEST -->
+<section class="why">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">The Case</p>
+      <h2 class="section-title">Why invest in<br /><em>Pescadero now.</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-num">01</div>
+        <h3 class="why-title">Rapid Market Appreciation</h3>
+        <p class="why-text">Baja California Sur's coastal corridor between Todos Santos and Cabo has seen sustained demand from North American buyers, with limited land inventory driving consistent value appreciation. These lots are priced attainably in a market where comparable land continues to rise.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-num">02</div>
+        <h3 class="why-title">Build Your Vision</h3>
+        <p class="why-text">Each 972 m² parcel is ideally sized for a home, casita, and pool. Purchase a single lot for a private retreat or acquire multiple contiguous lots to create a family compound or boutique investment property in one of Baja's most desirable neighborhoods.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-num">03</div>
+        <h3 class="why-title">Lifestyle & Community</h3>
+        <p class="why-text">Walk to surf, dine at farm-to-table restaurants, attend events at the Modern Elder Academy, and explore the artistic culture of Todos Santos — all within minutes. Pescadero's boutique hotels and retreat centers define a lifestyle of luxury and authentic Baja living.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <p class="section-label reveal">Get in Touch</p>
+        <h2 class="section-title reveal reveal-delay-1">Start the<br /><em>conversation.</em></h2>
+        <p class="contact-note reveal reveal-delay-2">
+          Whether you're interested in a single lot or multiple parcels, Bryan will walk you through every detail — from siting and zoning to the purchase process for foreign buyers. No pressure, just honest guidance from a team that knows this land.
+        </p>
+        <div class="agent-card reveal reveal-delay-3">
+          <p class="agent-title">Licensed Real Estate Advisor · RARE</p>
+          <p class="agent-name">Bryan Raydon</p>
+          <div class="agent-contact" style="margin-top:12px;">
+            <a href="tel:+15304486530" class="agent-link">+1 (530) 448-6530</a>
+            <a href="mailto:bryanr@ricardoamigo.com" class="agent-link">bryanr@ricardoamigo.com</a>
+            <a href="https://wa.me/15304486530" target="_blank" class="agent-link">WhatsApp Bryan →</a>
+          </div>
+        </div>
+      </div>
+      <div class="form-wrap reveal reveal-delay-2">
+        <form id="inquiryForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fname">First Name</label>
+              <input class="form-input" type="text" id="fname" name="fname" required placeholder="Jane" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lname">Last Name</label>
+              <input class="form-input" type="text" id="lname" name="lname" required placeholder="Smith" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" name="email" required placeholder="jane@email.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone / WhatsApp</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="lotInterest">Lot(s) of Interest</label>
+              <select class="form-select" id="lotInterest" name="lotInterest">
+                <option value="">Any / Not sure</option>
+                <option value="Lot 1 - $185,000">Lot #1 — $185,000</option>
+                <option value="Lot 2 - $185,000">Lot #2 — $185,000</option>
+                <option value="Lot 3 - $185,000">Lot #3 — $185,000</option>
+                <option value="Lot 4 - $185,000">Lot #4 — $185,000</option>
+                <option value="Lot 5 - $149,000">Lot #5 — $149,000 ✦ Best Value</option>
+                <option value="Lot 6 - $195,000">Lot #6 — $195,000</option>
+                <option value="Lot 7 - $195,000">Lot #7 — $195,000</option>
+                <option value="Multiple lots">Multiple lots</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="timeline">Your Timeline</label>
+              <select class="form-select" id="timeline" name="timeline">
+                <option value="">Select</option>
+                <option>Ready to move forward</option>
+                <option>Within 3 months</option>
+                <option>3–6 months</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message (optional)</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Tell Bryan what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Inquiry</button>
+          <p class="form-disclaimer">Your information is shared only with Bryan Raydon at RARE. We respect your privacy and will never sell your contact information.</p>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <h3>Thank you.</h3>
+          <p>Bryan will be in touch within 24 hours. In the meantime, feel free to reach him directly at <a href="tel:+15304486530" style="color:var(--gold-lt);">+1 (530) 448-6530</a> or via WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="https://todossantosmexicorealestate.com/assets/img/logo.svg" alt="RARE Ricardo Amigo Real Estate" />
+  </div>
+  <div class="footer-links">
+    <a href="https://ricardoamigo.com" target="_blank">RARE Website</a>
+    <a href="#contact">Contact Bryan</a>
+    <a href="https://ricardoamigo.com/for-sale/strawberry-fields-6/25-4316" target="_blank">View MLS</a>
+  </div>
+  <p class="footer-note">© 2026 Ricardo Amigo Real Estate. All listings subject to change. Prices in USD. Information deemed reliable but not guaranteed. Licensed in Baja California Sur, Mexico.</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/15304486530?text=Hi%20Bryan,%20I%20found%20Strawberry%20Fields%20and%20I%27m%20interested%20in%20learning%20more%20about%20the%20lots." target="_blank" class="wa-float" aria-label="WhatsApp Bryan">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  // ── Lot data ──────────────────────────────────────────
+  const lots = [
+    { id: 1, price: 185000, mls: '25-4310', mlsUrl: 'https://ricardoamigo.com/for-sale/strawberry-fields-1/25-4310',
+      img: 'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000529787986000000-o.jpg',
+      desc: 'A beautifully situated parcel on a private cul-de-sac in the prestigious Gavilan neighborhood. Ocean views from the second level, walking distance to San Pedrito surf beach, and surrounded by lush farmland. Ideally sized for a home with casita and pool.' },
+    { id: 2, price: 185000, mls: '25-4311', mlsUrl: 'https://ricardoamigo.com/for-sale/strawberry-fields-2/25-4311',
+      img: 'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000627479192000000-o.jpg',
+      desc: 'One of seven contiguous lots offering exceptional flexibility — purchase solo or combine with adjacent parcels for a larger estate. Stunning views, serene farmland setting, and proximity to Pescadero\'s world-class amenities.' },
+    { id: 3, price: 185000, mls: '25-4312', mlsUrl: 'https://ricardoamigo.com/for-sale/strawberry-fields-3/25-4312',
+      img: 'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000628973100000000-o.jpg',
+      desc: 'A premium parcel in the heart of the Strawberry Fields community. Ocean views, gentle Pacific breezes, and an upscale neighborhood — all less than 400 meters from the sea.' },
+    { id: 4, price: 185000, mls: '25-4314', mlsUrl: 'https://ricardoamigo.com/for-sale/strawberry-fields-4/25-4314',
+      img: 'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000629932340000000-o.jpg',
+      desc: 'Build the Baja retreat you\'ve always imagined on this 972 m² lot. Nestled among organic farmland, with ocean views from above and the Pacific accessible on foot.' },
+    { id: 5, price: 149000, originalPrice: 185000, mls: '25-4315', mlsUrl: 'https://ricardoamigo.com/for-sale/strawberry-fields-5/25-4315',
+      img: 'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000631144182000000-o.jpg',
+      badge: 'Best Value',
+      desc: 'The most attainably priced lot in the collection — an exceptional opportunity to enter this sought-after community at $149,000 USD. Same 972 m², same ocean views, same walkable access to San Pedrito. Act quickly.' },
+    { id: 6, price: 195000, mls: '25-4316', mlsUrl: 'https://ricardoamigo.com/for-sale/strawberry-fields-6/25-4316',
+      img: 'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000632571575000000-o.jpg',
+      desc: 'Discover an extraordinary opportunity to acquire a sensibly-sized parcel in the prestigious Gavilan neighborhood. Stunning ocean views from the second level, perfectly suited for a single-family home with garage, casita, and pool.' },
+    { id: 7, price: 195000, mls: '25-4317', mlsUrl: 'https://ricardoamigo.com/for-sale/strawberry-fields-7/25-4317',
+      img: 'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000634185944000000-o.jpg',
+      desc: 'The final lot at the edge of the collection — offering privacy and commanding views. A rare chance to build at the boundary of farmland and the Pacific horizon, in one of Baja\'s most desirable neighborhoods.' },
+  ];
+
+  const fmt = (n) => '$' + n.toLocaleString('en-US') + ' USD';
+
+  // ── Build grid ────────────────────────────────────────
+  const grid = document.getElementById('lotsGrid');
+  lots.forEach((lot, i) => {
+    const card = document.createElement('div');
+    card.className = 'lot-card';
+    card.setAttribute('data-id', lot.id);
+    card.innerHTML = `
+      <img src="${lot.img}" alt="Strawberry Fields Lot ${lot.id}" loading="lazy" />
+      <div class="lot-card-inner">
+        <div class="lot-num">#${lot.id}</div>
+        <div class="lot-price-sm">${fmt(lot.price)}</div>
+      </div>
+      ${lot.badge ? `<span class="lot-badge-sale">${lot.badge}</span>` : ''}
+      <span class="lot-badge-avail">Available</span>
+    `;
+    card.addEventListener('click', () => selectLot(lot.id));
+    grid.appendChild(card);
+  });
+
+  // ── Select lot ────────────────────────────────────────
+  let selectedId = null;
+  function selectLot(id) {
+    const lot = lots.find(l => l.id === id);
+    if (!lot) return;
+    selectedId = id;
+
+    // Update cards
+    document.querySelectorAll('.lot-card').forEach(c => {
+      c.classList.toggle('active', parseInt(c.dataset.id) === id);
+    });
+
+    // Update form select
+    const sel = document.getElementById('lotInterest');
+    for (let i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value.includes(`Lot ${id}`)) {
+        sel.selectedIndex = i; break;
+      }
+    }
+
+    // Update detail panel
+    document.getElementById('detailTitle').textContent = `Strawberry Fields #${lot.id}`;
+    const priceEl = document.getElementById('detailPrice');
+    priceEl.innerHTML = lot.originalPrice
+      ? `${fmt(lot.price)} <s>${fmt(lot.originalPrice)}</s>`
+      : fmt(lot.price);
+    document.getElementById('detailText').textContent = lot.desc;
+    document.getElementById('detailMLS2').textContent = lot.mls;
+    document.getElementById('detailMLS').href = lot.mlsUrl;
+    document.getElementById('detailInquire').setAttribute('data-lot', `Lot ${lot.id}`);
+
+    // Scroll to detail
+    document.getElementById('lotDetail').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Auto-select lot 5 (best value) on load
+  window.addEventListener('load', () => selectLot(5));
+
+  // ── Reveal on scroll ──────────────────────────────────
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => obs.observe(el));
+
+  // ── Form ──────────────────────────────────────────────
+  document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = new FormData(this);
+
+    // Build mailto
+    const fname    = data.get('fname');
+    const lname    = data.get('lname');
+    const email    = data.get('email');
+    const phone    = data.get('phone') || 'Not provided';
+    const lotInt   = data.get('lotInterest') || 'Not specified';
+    const timeline = data.get('timeline') || 'Not specified';
+    const message  = data.get('message') || '';
+
+    const body = `New Strawberry Fields inquiry from the landing page.
+
+Name: ${fname} ${lname}
+Email: ${email}
+Phone/WhatsApp: ${phone}
+Lot of Interest: ${lotInt}
+Timeline: ${timeline}
+Message: ${message}
+
+---
+Sent via Strawberry Fields Landing Page`;
+
+    const mailtoUrl = `mailto:bryanr@ricardoamigo.com?cc=info@ricardoamigo.com&subject=Strawberry Fields Inquiry — ${fname} ${lname}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+
+    this.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  });
+</script>
+</body>
+</html>
