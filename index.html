@@ -496,6 +496,13 @@
     .footer-links a:hover { color: var(--gold-lt); }
     .footer-note { font-size: .68rem; color: rgba(107,116,85,.6); line-height: 1.5; max-width: 360px; }
 
+    /* ─── RENDERS ─────────────────────────────────────── */
+    .render-item { position: relative; }
+    .render-caption {
+      font-size: .64rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--sage); margin-top: 8px; padding-left: 2px;
+    }
+
     /* ─── ANIMATIONS ──────────────────────────────────── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -675,6 +682,59 @@
   </div>
 </section>
 
+<!-- RENDERS -->
+<section class="renders" style="background: var(--earth); padding: 100px 0;">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:end; margin-bottom:56px;">
+      <div>
+        <p class="section-label reveal">Build Your Vision</p>
+        <h2 class="section-title reveal reveal-delay-1">What's <em>possible here.</em></h2>
+      </div>
+      <p class="reveal reveal-delay-2" style="font-size:.9rem; line-height:1.8; color:var(--sage); padding-bottom:4px;">From the site plan to architectural renders — a glimpse of the home you can build on one of these seven lots.</p>
+    </div>
+
+    <!-- Sitemap + Floor Plan row -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+      <div class="render-item reveal">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180312374394000000-o.jpg" alt="Site map" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Site Map</p>
+      </div>
+      <div class="render-item reveal reveal-delay-1">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180315292112000000-o.jpg" alt="Architectural floor plan" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Architectural Floor Plan</p>
+      </div>
+    </div>
+
+    <!-- Frentes row -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+      <div class="render-item reveal">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180313111475000000-o.jpg" alt="Front elevation 1" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Front Elevation</p>
+      </div>
+      <div class="render-item reveal reveal-delay-1">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180314467276000000-o.jpg" alt="Front elevation 2" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Street View</p>
+      </div>
+    </div>
+
+    <!-- Vista renders row — wide -->
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px;">
+      <div class="render-item reveal">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180316652559000000-o.jpg" alt="Vista render 1" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Vista — Living</p>
+      </div>
+      <div class="render-item reveal reveal-delay-1">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180317986397000000-o.jpg" alt="Vista render 2" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Vista — Terrace</p>
+      </div>
+      <div class="render-item reveal reveal-delay-2">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180319071438000000-o.jpg" alt="Vista aerea" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Aerial Render</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHY INVEST -->
 <section class="why">
   <div class="container">
@@ -717,7 +777,7 @@
           <p class="agent-name">Bryan Raydon</p>
           <div class="agent-contact" style="margin-top:12px;">
             <a href="tel:+15304486530" class="agent-link">+1 (530) 448-6530</a>
-            <a href="mailto:bryanr@ricardoamigo.com" class="agent-link">bryanr@ricardoamigo.com</a>
+            <a href="/cdn-cgi/l/email-protection#5a3828233b34281a2833393b283e353b37333d3574393537" class="agent-link"><span class="__cf_email__" data-cfemail="90f2e2e9f1fee2d0e2f9f3f1e2f4fff1fdf9f7ffbef3fffd">[email&#160;protected]</span></a>
             <a href="https://wa.me/15304486530" target="_blank" class="agent-link">WhatsApp Bryan →</a>
           </div>
         </div>
@@ -804,7 +864,7 @@
   </svg>
 </a>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const lots = [
     { id:1, price:185000, mls:'25-4310', mlsUrl:'https://ricardoamigo.com/for-sale/strawberry-fields-1/25-4310',
       img:'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000529787986000000-o.jpg',
@@ -881,10 +941,4 @@
     e.preventDefault();
     const d = new FormData(this);
     const body = `New Strawberry Fields inquiry\n\nName: ${d.get('fname')} ${d.get('lname')}\nEmail: ${d.get('email')}\nPhone: ${d.get('phone')||'—'}\nLot: ${d.get('lotInterest')||'Not specified'}\nTimeline: ${d.get('timeline')||'—'}\nMessage: ${d.get('message')||'—'}\n\n— Sent via Strawberry Fields Landing Page`;
-    window.location.href = `mailto:bryanr@ricardoamigo.com?cc=info@ricardoamigo.com&subject=Strawberry Fields Inquiry — ${d.get('fname')} ${d.get('lname')}&body=${encodeURIComponent(body)}`;
-    this.style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
-  });
-</script>
-</body>
-</html>
+    window.location.href = `mailto:bryanr@ricardoamigo.com?cc=info@ricardoa
