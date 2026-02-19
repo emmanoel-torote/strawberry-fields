@@ -930,3 +930,350 @@
     const d = new FormData(this);
     const body = `New Strawberry Fields inquiry\n\nName: ${d.get('fname')} ${d.get('lname')}\nEmail: ${d.get('email')}\nPhone: ${d.get('phone')||'—'}\nLot: ${d.get('lotInterest')||'Not specified'}\nTimeline: ${d.get('timeline')||'—'}\nMessage: ${d.get('message')||'—'}\n\n— Sent via Strawberry Fields Landing Page`;
     window.location.href = `mailto:bryanr@ricardoamigo.com?cc=info@ricardoa
+        <p class="section-body">
+          Seven contiguous lots in the prestigious Gavilan neighborhood of Pescadero — each approximately 972 m², perfectly sized for a single-family home with a garage, casita, and pool. Purchase one lot or acquire multiple to create an estate. Priced attainably in one of Baja California Sur's most sought-after corridors, these lots offer immediate ocean views from the second level and a lifestyle defined by surf, nature, and community.
+        </p>
+        <div class="stat-row">
+          <div class="stat"><div class="stat-num">7</div><div class="stat-label">Lots Available</div></div>
+          <div class="stat"><div class="stat-num">972</div><div class="stat-label">m² per lot</div></div>
+          <div class="stat"><div class="stat-num">&lt;400m</div><div class="stat-label">To the sea</div></div>
+          <div class="stat"><div class="stat-num">1:15</div><div class="stat-label">From SJD Airport</div></div>
+        </div>
+      </div>
+      <div class="intro-img">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000627479192000000-o.jpg" alt="Strawberry Fields aerial view" />
+        <div class="intro-tag">Gavilan · Pescadero</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOTS SELECTOR -->
+<section class="lots-section">
+  <div class="container">
+    <div class="lots-intro">
+      <div>
+        <p class="section-label">>Available Parcels</p>
+        <h2 class="section-title">Choose <em>your lot.</em></h2>
+      </div>
+      <p class="lots-note">>Select any lot below to view details, pricing, and request more information.</p>
+    </div>
+    <div class="lots-grid" id="lotsGrid"></div>
+    <div class="lot-detail"> id="lotDetail">
+      <div>
+        <h3 class="lot-detail-title" id="detailTitle">Strawberry Fields #1</h3>
+        <p class="lot-detail-price" id="detailPrice">$185,000 USD</p>
+        <p class="lot-detail-text" id="detailText"></p>
+        <div class="lot-detail-cta">
+          <a href="#contact" class="btn-primary" id="detailInquire">Inquire About This Lot</a>
+          <a href="#" target="_blank" class="btn-secondary" id="detailMLS">View Full Listing ↗</a>
+        </div>
+      </div>
+      <div class="lot-detail-meta">
+        <div class="meta-item"><span class="meta-key">Lot Area</span><span class="meta-val">972 m²</span></div>
+        <div class="meta-item"><span class="meta-key">Title</span><span class="meta-val">Escritura</span></div>
+        <div class="meta-item"><span class="meta-key">Community</span><span class="meta-val">Gavilan, Pescadero</span></div>
+        <div class="meta-item"><span class="meta-key">MLS</span><span class="meta-val" id="detailMLS2">25-4310</span></div>
+        <div class="meta-item"><span class="meta-key">Status</span><span class="meta-val" style="color: var(--gold-lt);">Available</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location">
+  <div class="container">
+    <div class="location-grid">
+      <div>
+        <p class="section-label">>Where You'll Be</p>
+        <h2 class="section-title">Everything within<br /><em>reach.</em></h2>
+        <p class="section-body">
+          Situated in the Gavilan neighborhood on a private cul-de-sac, Strawberry Fields sits at the crossroads of Baja's most vibrant coastal communities. San Pedrito surf beach is a short walk; Cerritos, Todos Santos, and the Modern Elder Academy are minutes away.
+        </p>
+        <div class="location-points">
+          <div class="loc-item"><div class="loc-icon">~</div><div><div class="loc-name">San Pedrito Beach</div><div class="loc-dist">Walking distance · World-class surf break</div></div></div>
+          <div class="loc-item"><div class="loc-icon">~</div><div><div class="loc-name">Cerritos Beach</div><div class="loc-dist">5 min drive · Popular beach &amp; restaurants</div></div></div>
+          <div class="loc-item"><div class="loc-icon">~</div><div><div class="loc-name">Todos Santos</div><div class="loc-dist">15 min · Pueblo Mágico, art galleries, dining</div></div></div>
+          <div class="loc-item"><div class="loc-icon">~</div><div><div class="loc-name">Cabo San Lucas</div><div class="loc-dist">45 min · International hub</div></div></div>
+          <div class="loc-item"><div class="loc-icon">~</div><div><div class="loc-name">SJD International Airport</div><div class="loc-dist">1h 15min · Direct flights from major US cities</div></div></div>
+          <div class="loc-item"><div class="loc-icon">~</div><div><div class="loc-name">Modern Elder Academy</div><div class="loc-dist">Minutes away · World-renowned wellness retreat</div></div></div>
+        </div>
+      </div>
+      <div class="location-visual">
+        <div class="location-img-wrap">
+          <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000628973100000000-o.jpg" alt="Pescadero coastline" />
+        </div>
+        <p class="location-caption">Pescadero · Gavilan Neighborhood</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="container">
+    <p class="section-label"> style="margin-bottom:40px;">The Land</p>
+    <div class="gallery-grid">>
+      <div class="gallery-item"><img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000629932340000000-o.jpg" alt="Strawberry Fields aerial" /></div>
+      <div class="gallery-item"><img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000631144182000000-o.jpg" alt="Ocean views" /></div>
+      <div class="gallery-item"><img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000632571575000000-o.jpg" alt="Farmland surroundings" /></div>
+      <div class="gallery-item"><img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000634185944000000-o.jpg" alt="Neighborhood" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- RENDERS -->
+<section class="renders" style="background: var(--earth); padding: 100px 0;">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:end; margin-bottom:56px;">
+      <div>
+        <p class="section-label">>Build Your Vision</p>
+        <h2 class="section-title">What's <em>possible here.</em></h2>
+      </div>
+      <p style="font-size:.9rem; line-height:1.8; color:var(--sage); padding-bottom:4px;">From the site plan to architectural renders — a glimpse of the home you can build on one of these seven lots.</p>
+    </div>
+
+    <!-- Sitemap + Floor Plan row -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+      <div class="render-item">>
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180312374394000000-o.jpg" alt="Site map" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Site Map</p>
+      </div>
+      <div class="render-item">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180315292112000000-o.jpg" alt="Architectural floor plan" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Architectural Floor Plan</p>
+      </div>
+    </div>
+
+    <!-- Frentes row -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+      <div class="render-item">>
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180313111475000000-o.jpg" alt="Front elevation 1" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Front Elevation</p>
+      </div>
+      <div class="render-item">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180314467276000000-o.jpg" alt="Front elevation 2" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Street View</p>
+      </div>
+    </div>
+
+    <!-- Vista renders row — wide -->
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px;">
+      <div class="render-item">>
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180316652559000000-o.jpg" alt="Vista render 1" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Vista — Living</p>
+      </div>
+      <div class="render-item">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180317986397000000-o.jpg" alt="Vista render 2" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Vista — Terrace</p>
+      </div>
+      <div class="render-item">
+        <img src="https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20251204180319071438000000-o.jpg" alt="Vista aerea" style="width:100%;border-radius:2px;display:block;" />
+        <p class="render-caption">Aerial Render</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY INVEST -->
+<section class="why">
+  <div class="container">
+    <div>
+      <p class="section-label">The Case</p>
+      <h2 class="section-title">Why invest in<br /><em>Pescadero now.</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <h3 class="why-title">Rapid Market Appreciation</h3>
+        <p class="why-text">Baja California Sur's coastal corridor between Todos Santos and Cabo has seen sustained demand from North American buyers, with limited land inventory driving consistent value appreciation. These lots are priced attainably in a market where comparable land continues to rise.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <h3 class="why-title">Build Your Vision</h3>
+        <p class="why-text">Each 972 m² parcel is ideally sized for a home, casita, and pool. Purchase a single lot for a private retreat or acquire multiple contiguous lots to create a family compound or boutique investment property in one of Baja's most desirable neighborhoods.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <h3 class="why-title">Lifestyle & Community</h3>
+        <p class="why-text">Walk to surf, dine at farm-to-table restaurants, attend events at the Modern Elder Academy, and explore the artistic culture of Todos Santos — all within minutes. Pescadero's boutique hotels and retreat centers define a lifestyle of luxury and authentic Baja living.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <p class="section-label">>Get in Touch</p>
+        <h2 class="section-title">Start the<br /><em>conversation.</em></h2>
+        <p class="contact-note">
+          Whether you're interested in a single lot or multiple parcels, Bryan will walk you through every detail — from siting and zoning to the purchase process for foreign buyers. No pressure, just honest guidance from a team that knows this land.
+        </p>
+        <div class="agent-card">
+          <p class="agent-title">Licensed Real Estate Advisor · RARE</p>
+          <p class="agent-name">Bryan Raydon</p>
+          <div class="agent-contact" style="margin-top:12px;">
+            <a href="tel:+15304486530" class="agent-link">+1 (530) 448-6530</a>
+            <a href="/cdn-cgi/l/email-protection#5a3828233b34281a2833393b283e353b37333d3574393537" class="agent-link"><span class="__cf_email__" data-cfemail="90f2e2e9f1fee2d0e2f9f3f1e2f4fff1fdf9f7ffbef3fffd">[email&#160;protected]</span></a>
+            <a href="https://wa.me/15304486530" target="_blank" class="agent-link">WhatsApp Bryan →</a>
+          </div>
+        </div>
+      </div>
+      <div class="form-wrap">
+        <form id="inquiryForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fname">First Name</label>
+              <input class="form-input" type="text" id="fname" name="fname" required placeholder="Jane" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lname">Last Name</label>
+              <input class="form-input" type="text" id="lname" name="lname" required placeholder="Smith" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" name="email" required placeholder="jane@email.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone / WhatsApp</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="lotInterest">Lot(s) of Interest</label>
+              <select class="form-select" id="lotInterest" name="lotInterest">
+                <option value="">Any / Not sure</option>
+                <option value="Lot 1 - $185,000">Lot #1 — $185,000</option>
+                <option value="Lot 2 - $185,000">Lot #2 — $185,000</option>
+                <option value="Lot 3 - $185,000">Lot #3 — $185,000</option>
+                <option value="Lot 4 - $185,000">Lot #4 — $185,000</option>
+                <option value="Lot 5 - $149,000">Lot #5 — $149,000 ✦ Best Value</option>
+                <option value="Lot 6 - $195,000">Lot #6 — $195,000</option>
+                <option value="Lot 7 - $195,000">Lot #7 — $195,000</option>
+                <option value="Multiple lots">Multiple lots</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="timeline">Your Timeline</label>
+              <select class="form-select" id="timeline" name="timeline">
+                <option value="">Select</option>
+                <option>Ready to move forward</option>
+                <option>Within 3 months</option>
+                <option>3–6 months</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message (optional)</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Tell Bryan what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Inquiry</button>
+          <p class="form-disclaimer">Your information is shared only with Bryan Raydon at RARE. We respect your privacy and will never sell your contact information.</p>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <h3>Thank you.</h3>
+          <p>Bryan will be in touch within 24 hours. In the meantime, feel free to reach him directly at <a href="tel:+15304486530" style="color:var(--gold-lt);">+1 (530) 448-6530</a> or via WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="https://todossantosmexicorealestate.com/assets/img/logo.svg" alt="RARE Ricardo Amigo Real Estate" />
+  </div>
+  <div class="footer-links">
+    <a href="https://ricardoamigo.com" target="_blank">RARE Website</a>
+    <a href="#contact">Contact Bryan</a>
+    <a href="https://ricardoamigo.com/for-sale/strawberry-fields-6/25-4316" target="_blank">View MLS</a>
+  </div>
+  <p class="footer-note">© 2026 Ricardo Amigo Real Estate. All listings subject to change. Prices in USD. Information deemed reliable but not guaranteed. Licensed in Baja California Sur, Mexico.</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/15304486530?text=Hi%20Bryan,%20I%20found%20Strawberry%20Fields%20and%20I%27m%20interested%20in%20learning%20more%20about%20the%20lots." target="_blank" class="wa-float" aria-label="WhatsApp Bryan">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const lots = [
+    { id:1, price:185000, mls:'25-4310', mlsUrl:'https://ricardoamigo.com/for-sale/strawberry-fields-1/25-4310',
+      img:'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000529787986000000-o.jpg',
+      desc:'A beautifully situated parcel on a private cul-de-sac in the prestigious Gavilan neighborhood. Ocean views from the second level, walking distance to San Pedrito surf beach, and surrounded by lush farmland. Ideally sized for a home with casita and pool.' },
+    { id:2, price:185000, mls:'25-4311', mlsUrl:'https://ricardoamigo.com/for-sale/strawberry-fields-2/25-4311',
+      img:'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000627479192000000-o.jpg',
+      desc:'One of seven contiguous lots offering exceptional flexibility — purchase solo or combine with adjacent parcels for a larger estate. Stunning views, serene farmland setting, and proximity to Pescadero\'s world-class amenities.' },
+    { id:3, price:185000, mls:'25-4312', mlsUrl:'https://ricardoamigo.com/for-sale/strawberry-fields-3/25-4312',
+      img:'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000628973100000000-o.jpg',
+      desc:'A premium parcel in the heart of the Strawberry Fields community. Ocean views, gentle Pacific breezes, and an upscale neighborhood — all less than 400 meters from the sea.' },
+    { id:4, price:185000, mls:'25-4314', mlsUrl:'https://ricardoamigo.com/for-sale/strawberry-fields-4/25-4314',
+      img:'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000629932340000000-o.jpg',
+      desc:'Build the Baja retreat you\'ve always imagined on this 972 m² lot. Nestled among organic farmland, with ocean views from above and the Pacific accessible on foot.' },
+    { id:5, price:149000, originalPrice:185000, mls:'25-4315', mlsUrl:'https://ricardoamigo.com/for-sale/strawberry-fields-5/25-4315',
+      badge:'Best Value',
+      img:'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000631144182000000-o.jpg',
+      desc:'The most attainably priced lot in the collection — an exceptional opportunity to enter this sought-after community at $149,000 USD. Same 972 m², same ocean views, same walkable access to San Pedrito. Act quickly.' },
+    { id:6, price:195000, mls:'25-4316', mlsUrl:'https://ricardoamigo.com/for-sale/strawberry-fields-6/25-4316',
+      img:'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000632571575000000-o.jpg',
+      desc:'Discover an extraordinary opportunity to acquire a sensibly-sized parcel in the prestigious Gavilan neighborhood. Stunning ocean views from the second level, perfectly suited for a single-family home with garage, casita, and pool.' },
+    { id:7, price:195000, mls:'25-4317', mlsUrl:'https://ricardoamigo.com/for-sale/strawberry-fields-7/25-4317',
+      img:'https://cdn.resize.sparkplatform.com/cab/1280x1024/true/20250926000634185944000000-o.jpg',
+      desc:'The final lot at the edge of the collection — offering privacy and commanding views. A rare chance to build at the boundary of farmland and the Pacific horizon, in one of Baja\'s most desirable neighborhoods.' },
+  ];
+
+  const fmt = n => '$' + n.toLocaleString('en-US') + ' USD';
+  const grid = document.getElementById('lotsGrid');
+
+  lots.forEach(lot => {
+    const card = document.createElement('div');
+    card.className = 'lot-card';
+    card.dataset.id = lot.id;
+    card.innerHTML = `
+      <img src="${lot.img}" alt="Strawberry Fields Lot ${lot.id}" loading="lazy" />
+      <div class="lot-card-inner">
+        <div class="lot-num">#${lot.id}</div>
+        <div class="lot-price-sm">${fmt(lot.price)}</div>
+      </div>
+      ${lot.badge ? `<span class="lot-badge-sale">${lot.badge}</span>` : ''}
+      <span class="lot-badge-avail">Available</span>
+    `;
+    card.addEventListener('click', () => selectLot(lot.id));
+    grid.appendChild(card);
+  });
+
+  window.addEventListener('load', () => selectLot(5));
+
+  function selectLot(id) {
+    const lot = lots.find(l => l.id === id);
+    if (!lot) return;
+    document.querySelectorAll('.lot-card').forEach(c => c.classList.toggle('active', +c.dataset.id === id));
+    document.getElementById('detailTitle').textContent = `Strawberry Fields #${lot.id}`;
+    document.getElementById('detailPrice').innerHTML = lot.originalPrice
+      ? `${fmt(lot.price)} <s>${fmt(lot.originalPrice)}</s>`
+      : fmt(lot.price);
+    document.getElementById('detailText').textContent = lot.desc;
+    document.getElementById('detailMLS2').textContent = lot.mls;
+    document.getElementById('detailMLS').href = lot.mlsUrl;
+    const sel = document.getElementById('lotInterest');
+    for (let i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value.includes(`Lot ${lot.id}`)) { sel.selectedIndex = i; break; }
+    }
+  }
+
+
+
+  // Form
+  document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const d = new FormData(this);
+    const body = `New Strawberry Fields inquiry\n\nName: ${d.get('fname')} ${d.get('lname')}\nEmail: ${d.get('email')}\nPhone: ${d.get('phone')||'—'}\nLot: ${d.get('lotInterest')||'Not specified'}\nTimeline: ${d.get('timeline')||'—'}\nMessage: ${d.get('message')||'—'}\n\n— Sent via Strawberry Fields Landing Page`;
+    window.location.href = `mailto:bryanr@ricardoamigo.com?cc=info@ricardoa
